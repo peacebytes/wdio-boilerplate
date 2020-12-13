@@ -1,6 +1,6 @@
 {
-  "name": "appium-boilerplate",
-  "version": "5.3.1",
+  "name": "wdio-boilerplate",
+  "version": "1.0.0",
   "description": "Boilerplate project to run WebdriverIO tests with Appium to test native applications on iOS and Android",
   "scripts": {
     "android.browserstack.app": "./node_modules/.bin/wdio ./config/browserstack/wdio.android.bs.app.conf.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdriverio/appium-boilerplate.git"
+    "url": "git+https://github.com:switbe/wdio-boilerplate.git"
   },
   "keywords": [
     "WebdriverIO",
@@ -26,12 +26,8 @@
     "android",
     "ios"
   ],
-  "author": "Wim Selles <wim@wswebcreation.nl>",
+  "author": "switbe <hgiamisan@yahoo.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/webdriverio/appium-boilerplate/issues"
-  },
-  "homepage": "https://github.com/webdriverio/appium-boilerplate#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.10.4",
