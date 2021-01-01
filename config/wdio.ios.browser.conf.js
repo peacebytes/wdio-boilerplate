@@ -1,13 +1,6 @@
 const { config } = require('./wdio.shared.conf');
 
 // ============
-// Specs
-// ============
-config.specs = [
-    './tests/specs/**/browser*.spec.js',
-];
-
-// ============
 // Capabilities
 // ============
 // For all capabilities please check
