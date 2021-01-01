@@ -1,16 +1,6 @@
 const { config } = require('../wdio.shared.conf');
 
 // ============
-// Specs
-// ============
-config.specs = [
-    './tests/specs/**/app*.spec.js',
-];
-config.exclude = [
-    // 'path/to/excluded/files'
-];
-
-// ============
 // Capabilities
 // ============
 // For all capabilities please check

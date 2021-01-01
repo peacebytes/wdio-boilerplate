@@ -11,7 +11,8 @@
     "ios.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.ios.rdc.app.conf.js",
     "ios.browserstack.app": "./node_modules/.bin/wdio ./config/browserstack/wdio.ios.bs.app.conf.js",
     "ios.browser": "./node_modules/.bin/wdio ./config/wdio.ios.browser.conf.js",
-    "lint": "eslint config tests"
+    "lint": "eslint config tests",
+    "lint:fix": "eslint config tests --fix"
   },
   "repository": {
     "type": "git",

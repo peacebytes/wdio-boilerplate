@@ -2,16 +2,6 @@ const { join } = require('path');
 const { config } = require('./wdio.shared.conf');
 
 // ============
-// Specs Cucumber framework
-// ============
-config.specs = [
-    './tests/features/*.feature',
-],
-// Patterns to exclude.
-config.exclude = [
-    // 'path/to/excluded/files'
-],
-// ============
 // Capabilities
 // ============
 // For all capabilities please check

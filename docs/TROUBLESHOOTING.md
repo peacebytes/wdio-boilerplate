@@ -17,8 +17,11 @@ If that doesn't work, here is the solution:
 - appium 1.17.1
 - appium desktop 1.17.1
 - xcode 11.3.1 
-see: https://stackoverflow.com/questions/10335747/how-to-download-xcode-dmg-or-xip-file
+See all Xcode popular versions here
+https://stackoverflow.com/questions/10335747/how-to-download-xcode-dmg-or-xip-file
 
 Important:
 Open Xcode > Preference > Locations 
 Command Line Tools: Xcode 11.3.1
+
+Another solution to work with Xcode 12.x is to use appium1.20.beta version.

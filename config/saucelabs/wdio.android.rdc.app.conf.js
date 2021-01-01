@@ -1,13 +1,6 @@
 const { config } = require('../wdio.shared.conf');
 
 // ============
-// Specs
-// ============
-config.specs = [
-    './tests/specs/**/app*.spec.js',
-];
-
-// ============
 // Capabilities
 // ============
 // For all capabilities please check
@@ -43,10 +36,7 @@ config.capabilities = [
 // - automatically update the job status in the RDC cloud
 // - automatically default to the US RDC cloud
 config.services = ['sauce'];
-// If you need to connect to the US RDC cloud comment the below line of code
-config.region = 'eu';
-// and uncomment the below line of code
-// config.region = 'us';
+config.region = 'us';
 // Increase for real device support
 config.connectionRetryTimeout = 180000;
 

@@ -14,7 +14,7 @@ exports.hooks = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare: function (config, capabilities) {
-        console.log(">>>>> logging from onPrepare");
+        console.log('>>>>> logging from onPrepare');
     },
     /**
      * Gets executed before a worker process is spawned & can be used to initialize specific service
@@ -126,7 +126,7 @@ exports.hooks = {
      * @param {<Object>} results object containing test results
      */
     onComplete: function (exitCode, config, capabilities, results) {
-        console.log("<<<<<< logging from onComplete");
+        console.log('<<<<<< logging from onComplete');
     },
     /**
      * Gets executed when a refresh happens.
@@ -139,21 +139,21 @@ exports.hooks = {
      * Cucumber-specific hooks
      */
     beforeFeature: function (uri, feature, scenarios) {
-        console.log("-beforeFeature-");
+        console.log('-beforeFeature-');
     },
     beforeScenario: function (uri, feature, scenario, sourceLocation) {
-        console.log("-beforeScenario-");
+        console.log('-beforeScenario-');
     },
-    beforeStep: function ({uri, feature, step}, context) {
-        console.log("-beforeStep-");
+    beforeStep: function ({ uri, feature, step }, context) {
+        console.log('-beforeStep-');
     },
-    afterStep: function ({uri, feature, step}, context, {error, result, duration, passed}) {
-        console.log("-afterStep-");
+    afterStep: function ({ uri, feature, step }, context, { error, result, duration, passed }) {
+        console.log('-afterStep-');
     },
     afterScenario: function (uri, feature, scenario, result, sourceLocation) {
-        console.log("-afterScenario-");
+        console.log('-afterScenario-');
     },
     afterFeature: function (uri, feature, scenarios) {
-        console.log("-afterFeature-");
+        console.log('-afterFeature-');
     }
 };

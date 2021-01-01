@@ -2,13 +2,6 @@ const { join } = require('path');
 const { config } = require('./wdio.shared.conf');
 
 // ============
-// Specs
-// ============
-config.specs = [
-    './tests/specs/**/app.forms.spec.js',
-];
-
-// ============
 // Capabilities
 // ============
 // For all capabilities please check
