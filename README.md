@@ -47,3 +47,7 @@ To run Android tests on Sauce Labs
 ```
 npm run android.sauce.rdc.app
 ```
+
+* Note: To find out what features files to be executed, check this file out `config/cucumber.conf.js`
+
+Next update: report portal integration ! Coming soon.
