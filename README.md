@@ -1,11 +1,11 @@
 # appium-boilerplate
 
-To set up
+### To set up
 ```
 npm install
 ```
 
-To see if eslint has been followed
+### Run lint check
 ```
 npm run lint
 ```
@@ -14,17 +14,36 @@ To fix all formatting errors
 ```
 npm run lint:fix
 ```
+### How to run tests
 
-To run iOS tests
+#### iOS
+
+To run iOS tests on local
 ```
 npm run ios.app
 ```
 
-To run Android tests
+To run iOS tests on BrowserStack
+```
+npm run ios.browserstack.app
+```
+
+To run iOS tests on Sauce Labs
+```
+npm run ios.sauce.rdc.app
+```
+#### Android
+To run Android tests on local
 ```
 npm run android.app
 ```
 
-## More reading would be helfpfull
-See [FAQ](./docs)
+To run Android tests on BrowserStack
+```
+npm run android.browserstack.app
+```
 
+To run Android tests on Sauce Labs
+```
+npm run android.sauce.rdc.app
+```
