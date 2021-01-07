@@ -55,6 +55,8 @@
     "eslint-plugin-standard": "^4.0.2",
     "eslint-plugin-wdio": "^6.6.0",
     "node-fetch": "^2.6.1",
-    "webdriverio": "^6.7.2"
+    "webdriverio": "^6.7.2",
+    "wdio-reportportal-reporter": "6.1.0",
+    "wdio-reportportal-service": "6.1.0"
   }
 }

@@ -16,4 +16,5 @@ When(/^I tap on (.*)$/, function (barName) {
 
 Then('I should be able type in the input and validate the text', function () {
     console.log('huray !!!! Then works.');
+    expect(1).toBeGreaterThan(0, 'FAIL: not equal numbers');
 });
