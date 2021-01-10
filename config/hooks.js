@@ -1,3 +1,5 @@
+const reportportal = require('wdio-reportportal-reporter');
+const RpService = require('wdio-reportportal-service');
 //
 // =====
 // Hooks
@@ -13,7 +15,7 @@ exports.hooks = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    onPrepare: function (config, capabilities) {
+    onPrepare: async function (config, capabilities) {
         console.log('>>>>> logging from onPrepare');
     },
     /**
@@ -125,8 +127,10 @@ exports.hooks = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    onComplete: function (exitCode, config, capabilities, results) {
+    onComplete: async function (exitCode, config, capabilities, results) {
         console.log('<<<<<< logging from onComplete');
+        const link = await RpService.getLaunchUrl(config);
+        console.log(`Report portal link ${link}`);
     },
     /**
      * Gets executed when a refresh happens.
@@ -147,8 +151,17 @@ exports.hooks = {
     beforeStep: function ({ uri, feature, step }, context) {
         console.log('-beforeStep-');
     },
-    afterStep: function ({ uri, feature, step }, context, { error, result, duration, passed }) {
+    afterStep: function ({ uri, feature, stepData }, context, { error, result, duration, passed }) {
         console.log('-afterStep-');
+        if (!passed) {
+            let failureObject;
+            failureObject.type = 'afterStep';
+            failureObject.error = error;
+            failureObject.title = `${stepData.step.keyword}${stepData.step.text}`;
+            const screenShot = global.browser.takeScreenshot();
+            const attachment = Buffer.from(screenShot, 'base64');
+            reportportal.sendFileToTest(failureObject, 'error', 'screnshot.png', attachment);
+        }
     },
     afterScenario: function (uri, feature, scenario, result, sourceLocation) {
         console.log('-afterScenario-');

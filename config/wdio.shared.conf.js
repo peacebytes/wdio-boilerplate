@@ -1,5 +1,11 @@
 const { hooks } = require('./hooks');
 const { cucumber } = require('./cucumber.conf');
+const { rpConfig } = require('./rp.conf');
+const reportportal = require('wdio-reportportal-reporter');
+const RpService = require('wdio-reportportal-service');
+
+const rpConf = { ...rpConfig };
+
 exports.config = {
     // ====================
     // Runner and framework
@@ -16,12 +22,13 @@ exports.config = {
     waitforTimeout: 10000,
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
-    reporters: ['spec'],
+    reporters: ['spec', [reportportal, rpConf]],
 
     // ====================
     // Appium Configuration
     // ====================
     services: [
+        [RpService, {}],
         [
             'appium',
             {
