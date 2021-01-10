@@ -32,6 +32,7 @@ To run iOS tests on Sauce Labs
 ```
 npm run ios.sauce.rdc.app
 ```
+
 #### Android
 To run Android tests on local
 ```
@@ -48,19 +49,18 @@ To run Android tests on Sauce Labs
 npm run android.sauce.rdc.app
 ```
 
-#### Report Portal (RP) integration
-To have your report published to RP, provide your RP settings at `config/rp.conf.js`. Then run test with command
-```
-TOKEN=<your-report-portal-token> npm run ios.app
-```
+* Note: Don't forget to provide your Sauce Labs creds ;)
+#### Report Portal integration (local)
 
-If you project is for internal use only, you can put token in `config/rp.conf.js` and then run test as usual command
+Report Portal set up can be found at https://automationbytes.me/how-to-setup-report-portal
+(Important: Set memory to 4GB. See link for details)
+
+RP settings at `config/rp.conf.js`.
+
 ```
 npm run ios.app
 ```
 
-Report Portal set up can be found at https://automationbytes.me/how-to-setup-report-portal
-
-If you are eager to see how it works, just simply go to https://reportportal.io/ and click `Try demo`
+If you are eager to see how it works, just simply go to https://reportportal.io/ and click `Try demo`. Grabbing the settings from there and update `config/rp.conf.js`
 
 * Note: To find out what features files to be executed, check this file out `config/cucumber.conf.js`

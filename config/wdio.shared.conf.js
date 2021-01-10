@@ -1,10 +1,10 @@
 const { hooks } = require('./hooks');
 const { cucumber } = require('./cucumber.conf');
-const { conf } = require('./rp.conf');
+const { rpConfig } = require('./rp.conf');
 const reportportal = require('wdio-reportportal-reporter');
 const RpService = require('wdio-reportportal-service');
 
-const rpConf = { ...conf };
+const rpConf = { ...rpConfig };
 
 exports.config = {
     // ====================
