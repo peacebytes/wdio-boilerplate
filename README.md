@@ -1,4 +1,4 @@
-# appium-boilerplate
+# wdio-boilerplate
 
 ### To set up
 ```
